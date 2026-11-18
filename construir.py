@@ -53,7 +53,6 @@ def documento(fragmento):
     extra = [
         '<meta name="description" content="%s">' % DESCRIPCION,
         '<meta property="og:type" content="website">',
-        '<meta property="og:locale" content="es">',
         '<meta property="og:title" content="%s">' % TITULO,
         '<meta property="og:description" content="%s">' % DESCRIPCION,
         '<link rel="icon" href="%s">' % ICONO,
@@ -62,6 +61,8 @@ def documento(fragmento):
         extra.append('<meta property="og:url" content="%s/">' % url)
         if os.path.exists(os.path.join(AQUI, "sitio", "og.png")):
             extra.append('<meta property="og:image" content="%s/og.png">' % url)
+            extra.append('<meta property="og:image:width" content="1200">')
+            extra.append('<meta property="og:image:height" content="627">')
             extra.append('<meta name="twitter:card" content="summary_large_image">')
     # mismo punto de partida que añade Claude al publicar un artefacto
     base = "<style>html{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>"
