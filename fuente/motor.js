@@ -64,7 +64,7 @@ function buildLesson(){
   $('#pMin').textContent=L.min+' min';$('#pLvl').textContent=L.lvl;$('#pSteps').textContent=L.steps.length+' pasos';
   $('#tl').innerHTML=L.steps.map((s,i)=>`<li><button data-i="${i}" aria-label="Paso ${i+1}: ${s.t}"><span class="n">${i+1}</span><span class="t">${s.t}</span></button></li>`).join('');
   $('#learn').innerHTML=L.learn.map(l=>`<li>${l[0]}</li>`).join('');
-  document.title=L.title+' · AWS pieza a pieza';
+  document.title=L.title+' · Pieza a pieza';
   renderQuiz();
 }
 
@@ -247,7 +247,7 @@ function go(l,s){
 function setView(v){
   view=v;$('#lessonView').hidden=v!=='lesson';$('#catalogView').hidden=v!=='catalog';
   $('#tabLesson').setAttribute('aria-selected',v==='lesson');$('#tabCatalog').setAttribute('aria-selected',v==='catalog');
-  if(v==='catalog'){cancelAnimationFrame(raf);renderToc();if(location.hash!=='#catalogo'){try{history.replaceState(null,'','#catalogo')}catch(e){}}document.title='Catálogo · AWS pieza a pieza'}
+  if(v==='catalog'){cancelAnimationFrame(raf);renderToc();if(location.hash!=='#catalogo'){try{history.replaceState(null,'','#catalogo')}catch(e){}}document.title='Catálogo · Pieza a pieza'}
   closeSide();
 }
 const HASH=/^([a-z0-9]+)-(\d+)$/;

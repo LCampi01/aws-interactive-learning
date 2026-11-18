@@ -1,6 +1,7 @@
-# AWS pieza a pieza
+# Pieza a pieza
 
-Curso interactivo y gratuito, en español, para entender los servicios de AWS.
+Guía interactiva y gratuita, en español, para entender los servicios de AWS.
+Es independiente: no está afiliada a Amazon Web Services ni cuenta con su respaldo.
 Cada lección avanza paso a paso sobre un diagrama animado.
 
 - 50 lecciones: redes, cómputo, almacenamiento, bases de datos, mensajería, datos, IA, seguridad y despliegue.

@@ -1,6 +1,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>AWS pieza a pieza</title>
+<title>Pieza a pieza</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
 <style>
@@ -54,6 +54,8 @@ button{font:inherit;color:inherit;cursor:pointer}
   padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 .brand{display:flex;align-items:center;gap:10px;font:700 19px/1 var(--f-display);letter-spacing:-.01em;margin-right:auto}
 .brand i{display:grid;grid-template-columns:repeat(2,9px);gap:3px}
+.brand small{font:500 11px/1 var(--f-mono);letter-spacing:.04em;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:4px 8px;white-space:nowrap}
+@media (max-width:620px){.brand small{display:none}}
 .brand i b{width:9px;height:9px;border-radius:3px;background:var(--k-compute)}
 .brand i b:nth-child(2){background:var(--k-db)}.brand i b:nth-child(3){background:var(--k-msg)}.brand i b:nth-child(4){background:var(--k-ai)}
 .tabs{display:flex;gap:4px;background:var(--bg);padding:4px;border-radius:10px}
@@ -281,7 +283,7 @@ svg text{font-family:var(--f-body)}
 
 <header class="top"><div class="top-in">
   <button class="menu-btn" id="menuBtn" aria-controls="side" aria-expanded="false">Lecciones</button>
-  <div class="brand"><i aria-hidden="true"><b></b><b></b><b></b><b></b></i>AWS pieza a pieza</div>
+  <div class="brand"><i aria-hidden="true"><b></b><b></b><b></b><b></b></i>Pieza a pieza<small>guía para AWS</small></div>
   <div class="tabs" role="tablist">
     <button role="tab" id="tabLesson" aria-selected="true">Lecciones</button>
     <button role="tab" id="tabCatalog" aria-selected="false">Catálogo</button>

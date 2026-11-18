@@ -18,9 +18,11 @@ import json
 import os
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
-TITULO = "AWS pieza a pieza"
+NOMBRE = "Pieza a pieza"
+# La marca AWS va solo en la frase descriptiva, no en el nombre (normas de marca de AWS).
+TITULO = NOMBRE + ": guía interactiva para AWS"
 DESCRIPCION = (
-    "Curso interactivo y gratuito en español para entender los servicios de AWS: "
+    "Guía independiente, interactiva y gratuita en español para entender los servicios de AWS: "
     "50 lecciones con diagramas animados, casos de coste calculados y preguntas de práctica."
 )
 ICONO = (
@@ -47,6 +49,7 @@ def documento(fragmento):
     """Convierte el fragmento del artefacto en un documento HTML completo."""
     corte = fragmento.index('<header class="top">')
     cabeza, cuerpo = fragmento[:corte].strip(), fragmento[corte:]
+    cabeza = cabeza.replace("<title>%s</title>" % NOMBRE, "<title>%s</title>" % TITULO)
     url = ""
     if os.path.exists(os.path.join(AQUI, "sitio.json")):
         url = json.loads(leer("sitio.json")).get("url", "").rstrip("/")
